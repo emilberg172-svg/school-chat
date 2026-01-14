@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>School Chat</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      font-family: Arial;
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin: 5px;
+    }
+    button {
+      background: #10b981;
+      cursor: pointer;
+    }
+    #chat {
+      margin-top: 20px;
+      background: #020617;
+      padding: 15px;
+      height: 300px;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>💬 School Chat</h2>
+
+<input id="name" placeholder="Dein Name">
+<input id="room" placeholder="Raum (z.B. 10b)">
+<button onclick="join()">Beitreten</button>
+
+<div id="chat"></div>
+
+<input id="msg" placeholder="Nachricht">
+<button onclick="send()">Senden</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
